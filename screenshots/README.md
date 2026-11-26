@@ -1,15 +1,13 @@
 # Capturas de tela
 
-As capturas reais da tradução PT-BR foram selecionadas para a página do projeto. Os arquivos binários ainda precisam ser enviados para esta pasta pelo mantenedor.
+As sete capturas reais da tradução PT-BR estão publicadas nesta pasta e incorporadas ao README principal.
 
-Nomes previstos:
+- [01 — Tutorial de combate](01_tutorial_combate.jpg)
+- [02 — Informações do monstro](02_informacoes_do_monstro.jpg)
+- [03 — Diálogo com Moncho](03_dialogo_moncho.jpg)
+- [04 — Diálogo com Gaureen](04_dialogo_gaureen.jpg)
+- [05 — Diálogo sobre Mestre dos Monstros](05_dialogo_mestre_dos_monstros.jpg)
+- [06 — Menu de grupo e tutorial](06_menu_grupo_e_tutorial.jpg)
+- [07 — Diálogo com Royston](07_dialogo_royston.jpg)
 
-- 01_tutorial_combate.jpg
-- 02_informacoes_do_monstro.jpg
-- 03_dialogo_moncho.jpg
-- 04_dialogo_gaureen.jpg
-- 05_dialogo_mestre_dos_monstros.jpg
-- 06_menu_grupo_e_tutorial.jpg
-- 07_dialogo_royston.jpg
-
-Depois do envio, atualize a galeria no README principal com os respectivos caminhos.
+As imagens são capturas fornecidas pelo responsável do projeto durante a execução do jogo com a tradução ativa. Foram otimizadas para publicação, sem alteração dos textos exibidos.
