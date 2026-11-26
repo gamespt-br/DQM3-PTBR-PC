@@ -1,33 +1,34 @@
-# Configurar proteção da branch principal
+# Estado da proteção do repositório
 
-A integração conectada permite publicar e revisar arquivos do repositório, mas não disponibiliza aqui a operação administrativa de criação de regras de branch. A configuração abaixo precisa ser feita pelo proprietário na interface do GitHub.
+O repositório possui atualmente um ruleset ativo chamado `proteger-main`.
 
-## Criar um ruleset para main
+- **Status:** Active.
+- **Alvo configurado:** todas as branches (`~ALL`), não apenas `main`.
+- **Restrict deletions:** ativo.
+- **Block force pushes:** ativo (regra `non_fast_forward`).
+- **Bypass actors:** nenhum.
+- **Require a pull request before merging:** não está ativado no ruleset atual.
+- **Aprovações obrigatórias:** não configuradas.
 
-1. Abra **Settings → Rules → Rulesets** no repositório.
-2. Clique em **New branch ruleset**.
-3. Nome: `proteger-main`.
-4. Em enforcement status, selecione **Active**.
-5. Em target branches, selecione a branch padrão `main`.
-6. Não conceda bypass a terceiros. Se houver uma opção para bypass de administradores, considere cuidadosamente se deseja mantê-la; para maior proteção, não conceda bypass desnecessário.
-7. Ative:
-   - **Restrict deletions**.
-   - **Block force pushes**.
-   - **Require a pull request before merging**.
-   - **Require linear history**, após habilitar squash ou rebase merge nas configurações de Pull Requests, se necessário.
-8. Para evitar bloquear o mantenedor que trabalha sozinho, deixe o número de aprovações obrigatórias em zero inicialmente. Não habilite “Require review from Code Owners” até existir outro revisor que possa aprovar os PRs.
-9. Salve em **Create ruleset**.
+A API do GitHub também retorna `protected: true` para a branch `main`.
 
-## Verificação
+## Avaliação
 
-Depois de salvar, a página Rulesets deve mostrar `proteger-main` com status Active e alvo `main`.
+A configuração atual impede exclusões de branches e atualizações não fast-forward. Ela não obriga o uso de Pull Requests: como não há exigência de PR, alterações normais podem continuar sendo enviadas diretamente às branches por pessoas com permissão de escrita.
 
-A documentação do GitHub informa que rulesets estão disponíveis em repositórios públicos no plano Free e que administradores do repositório podem criá-los:
-https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository
+Se desejar exigir revisão antes de qualquer alteração na `main`, edite o ruleset em **Settings → Rules → Rulesets → proteger-main** e acrescente a regra **Require a pull request before merging**. Para um projeto mantido por uma única pessoa, mantenha o número de aprovações obrigatórias em zero até haver outro revisor.
+
+O ruleset foi configurado para todas as branches. Isso é mais abrangente do que proteger somente `main`; se preferir restringi-lo à branch principal, altere o alvo de branches para incluir somente `main`.
 
 ## Segurança complementar
 
-- Ative autenticação em dois fatores na conta GitHub.
-- Em Settings → Code security and analysis, habilite os recursos de secret scanning disponíveis para o repositório.
+- Mantenha a autenticação em dois fatores habilitada na conta.
+- O uso do endereço `users.noreply.github.com` nos commits recentes ajuda a evitar a exposição do e-mail pessoal em novas alterações. Commits anteriores continuam contendo o e-mail utilizado na época.
+- O workflow `.github/workflows/validar-conteudo-publico.yml` verifica extensões proibidas, tamanho e alguns padrões comuns de segredos. É uma defesa complementar, não substitui revisão manual nem uma ferramenta abrangente de secret scanning.
 - Não adicione tokens, senhas, saves ou arquivos originais/modificados do jogo.
-- O workflow `.github/workflows/validar-conteudo-publico.yml` verifica extensões proibidas, tamanho e alguns padrões comuns de segredos em PRs e commits na `main`. Ele é uma defesa complementar, não substitui revisão.
+
+## Links
+
+- [Ruleset proteger-main](https://github.com/xosonijo-prog/DQM3-PTBR-PC/rules/28177619)
+- [Configurações de regras](https://github.com/xosonijo-prog/DQM3-PTBR-PC/settings/rules)
+- [Documentação oficial do GitHub sobre rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository)
