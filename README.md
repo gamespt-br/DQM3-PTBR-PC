@@ -6,9 +6,9 @@ Primeira versão do tradutor comunitário para português brasileiro da versão 
 
 ## Aviso sobre conteúdo e direitos
 
-O pacote do tradutor contém **um único arquivo de dados de localização do jogo**, modificado para incorporar textos em português brasileiro. Na instalação, somente o arquivo indicado é substituído; o instalador cria uma cópia de segurança do original.
+O pacote do tradutor contém **um único arquivo de dados de localização do jogo**, modificado para incorporar textos em português brasileiro. Na instalação, somente esse arquivo é substituído; o usuário deve guardar uma cópia do original para poder restaurá-lo.
 
-Este pacote **não contém o jogo completo, o executável do jogo nem a estrutura completa de instalação**. O usuário precisa possuir e instalar sua própria cópia de DRAGON QUEST MONSTERS: The Dark Prince para PC/Steam.
+Este pacote **não contém o jogo completo, o executável do jogo nem a estrutura completa de instalação**. É necessário possuir sua própria cópia de DRAGON QUEST MONSTERS: The Dark Prince para PC/Steam.
 
 O arquivo de localização é um recurso técnico derivado do jogo e mantém a estrutura necessária para ser lido por ele. Portanto, não é um arquivo independente de legendas criado do zero. Os direitos sobre o jogo e seus elementos originais permanecem com seus respectivos titulares.
 
@@ -16,22 +16,27 @@ A tradução é disponibilizada gratuitamente e sem finalidade comercial. **A gr
 
 ## Download
 
-O pacote público de instalação ainda não está disponível nesta página. Quando publicado, ficará na página [Releases](https://github.com/gamespt-br/DQM3-PTBR-PC/releases).
+O pacote público **Tradutor PT-BR v1.0** será disponibilizado na página [Releases](https://github.com/gamespt-br/DQM3-PTBR-PC/releases).
 
-O pacote de instalação será composto pelo instalador, restaurador, instruções e o único arquivo de dados de localização modificado. Não será distribuída uma cópia do jogo.
+O arquivo distribuído será `DQM3_PTBR_Tradutor_v1.0.zip`. Ele contém somente:
+- o arquivo de dados de localização modificado;
+- `LEIA-ME.txt`, com as instruções de instalação e restauração;
+- `SHA256SUMS.txt`, com o hash para conferência de integridade.
+
+Não será distribuída uma cópia do jogo.
 
 ## Como instalar
 
-Quando você tiver o pacote Tradutor PT-BR v1.0:
-
-1. Extraia todo o conteúdo do ZIP para uma pasta.
+1. Baixe e extraia `DQM3_PTBR_Tradutor_v1.0.zip`.
 2. Feche o jogo.
-3. Execute `Instalar_PTBR.cmd`. Não abra o arquivo `.ps1` diretamente.
-4. Aguarde a busca automática. Se o jogo não for encontrado, selecione a pasta que contém `DQMonsters3.exe` e `DQMonsters3_Data`.
-5. Confira o caminho e digite `INSTALAR`.
+3. Na pasta de instalação do jogo pela Steam, abra `DQMonsters3_Data\\StreamingAssets\\AB`.
+4. Faça uma cópia do arquivo original que tem o mesmo nome do arquivo traduzido. Guarde essa cópia em outro local seguro.
+5. Copie o arquivo de localização que veio no ZIP para a pasta `AB` e confirme a substituição.
 6. Ao iniciar um **jogo novo**, escolha **Espanhol (Español)** na tela de idioma. Essa escolha é obrigatória para a tradução funcionar.
 
-O instalador faz backup do arquivo original. Para desfazer a instalação, execute `Restaurar_PTBR.cmd` e selecione o manifesto correspondente.
+Para restaurar o original, feche o jogo e copie o backup original de volta para a pasta `AB`, confirmando a substituição do arquivo traduzido.
+
+As instruções completas também estão em [Instalação](docs/INSTALACAO.md) e no `LEIA-ME.txt` incluído no ZIP.
 
 ## Imagens do jogo traduzido
 
@@ -58,7 +63,7 @@ O instalador faz backup do arquivo original. Para desfazer a instalação, execu
 
 ## Compatibilidade
 
-Esta primeira versão foi preparada para a versão de PC testada pelo responsável do projeto. Atualizações futuras do jogo podem exigir uma nova versão.
+Esta primeira versão foi preparada para a versão de PC testada pelo responsável do projeto. Atualizações futuras do jogo podem exigir uma nova versão. Não use o arquivo em versões diferentes sem antes conferir a compatibilidade.
 
 ## Créditos
 
