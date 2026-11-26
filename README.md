@@ -4,9 +4,17 @@ Primeira versão do tradutor comunitário para português brasileiro da versão 
 
 > Projeto não oficial, sem vínculo ou endosso da Square Enix.
 
+## Download
+
+O pacote público de instalação ainda não está disponível nesta página. Estamos preparando uma versão que aplique a tradução aos arquivos do jogo já instalados no computador, sem incluir uma cópia do bundle original do jogo.
+
+Quando estiver pronta, a versão para download ficará na página [Releases](https://github.com/gamespt-br/DQM3-PTBR-PC/releases).
+
 ## Como instalar
 
-1. Extraia todo o conteúdo do pacote para uma pasta.
+Quando você tiver o pacote Tradutor PT-BR v1.0:
+
+1. Extraia todo o conteúdo do ZIP para uma pasta.
 2. Feche o jogo.
 3. Execute `Instalar_PTBR.cmd`. Não abra o arquivo `.ps1` diretamente.
 4. Aguarde a busca automática. Se o jogo não for encontrado, selecione a pasta que contém `DQMonsters3.exe` e `DQMonsters3_Data`.
@@ -40,9 +48,4 @@ O instalador faz backup do arquivo original. Para desfazer a instalação, execu
 
 ## Compatibilidade
 
-Esta primeira versão foi preparada para a versão de PC testada pelo responsável do projeto. Atualizações futuras do jogo podem exigir uma nova versão do tradutor.
-
-## Distribuição
-
-O repositório contém documentação e imagens. O pacote local de instalação inclui dados do jogo e não deve ser publicado ou redistribuído publicamente sem a revisão das permissões necessárias.
-
+Esta primeira versão foi preparada para a versão de PC testada pelo responsável do projeto. Atualizações futuras do jogo podem exigir uma nova versão.
