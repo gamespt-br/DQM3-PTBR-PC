@@ -1,12 +1,12 @@
 # Tradutor PT-BR v1.0 — Dragon Quest Monsters: The Dark Prince (PC)
 
-Primeira versão do tradutor comunitário para português brasileiro da versão PC/Steam.
+Primeira versão do tradutor comunitário para português brasileiro da versão PC/Steam testada pelo responsável do projeto.
 
 > **Projeto independente, gratuito e não oficial.** Não é afiliado, patrocinado, aprovado ou endossado pela Square Enix. Não possuímos autorização ou licença oficial da Square Enix para esta tradução ou para a distribuição do arquivo de dados modificado.
 
 ## Aviso sobre conteúdo e direitos
 
-O pacote do tradutor contém **um único arquivo de dados de localização do jogo**, modificado para incorporar textos em português brasileiro. Na instalação, somente esse arquivo é substituído; o usuário deve guardar uma cópia do original para poder restaurá-lo.
+O pacote contém **um único arquivo de dados de localização do jogo**, modificado para incorporar textos em português brasileiro, além dos scripts auxiliares de instalação e restauração.
 
 Este pacote **não contém o jogo completo, o executável do jogo nem a estrutura completa de instalação**. É necessário possuir sua própria cópia de DRAGON QUEST MONSTERS: The Dark Prince para PC/Steam.
 
@@ -16,27 +16,35 @@ A tradução é disponibilizada gratuitamente e sem finalidade comercial. **A gr
 
 ## Download
 
-O pacote público **Tradutor PT-BR v1.0** será disponibilizado na página [Releases](https://github.com/gamespt-br/DQM3-PTBR-PC/releases).
+Quando publicada, a versão **Tradutor PT-BR v1.0** ficará na página [Releases](https://github.com/gamespt-br/DQM3-PTBR-PC/releases).
 
-O arquivo distribuído será `DQM3_PTBR_Tradutor_v1.0.zip`. Ele contém somente:
-- o arquivo de dados de localização modificado;
-- `LEIA-ME.txt`, com as instruções de instalação e restauração;
-- `SHA256SUMS.txt`, com o hash para conferência de integridade.
+O pacote `DQM3_PTBR_Tradutor_v1.0.zip` contém:
+- `Instalar_PTBR.cmd` e `Instalar_PTBR.ps1`;
+- `Restaurar_PTBR.cmd` e `Restaurar_PTBR.ps1`;
+- `LEIA-ME.txt`;
+- uma pasta `bundle` com somente o arquivo de dados de localização modificado.
 
-Não será distribuída uma cópia do jogo.
+Não será distribuída uma cópia do jogo, seu executável ou sua estrutura completa de instalação. O ZIP do pacote não é armazenado no histórico Git do repositório.
 
 ## Como instalar
 
-1. Baixe e extraia `DQM3_PTBR_Tradutor_v1.0.zip`.
+1. Baixe e extraia `DQM3_PTBR_Tradutor_v1.0.zip` para uma pasta.
 2. Feche o jogo.
-3. Na pasta de instalação do jogo pela Steam, abra `DQMonsters3_Data\\StreamingAssets\\AB`.
-4. Faça uma cópia do arquivo original que tem o mesmo nome do arquivo traduzido. Guarde essa cópia em outro local seguro.
-5. Copie o arquivo de localização que veio no ZIP para a pasta `AB` e confirme a substituição.
+3. Execute `Instalar_PTBR.cmd`. Não abra o arquivo `.ps1` diretamente.
+4. O instalador tentará localizar o jogo automaticamente. Se não encontrar, selecione a pasta que contém `DQMonsters3.exe` e `DQMonsters3_Data`.
+5. Confira o caminho apresentado e digite `INSTALAR` para confirmar. O instalador cria e verifica um backup antes de substituir o arquivo.
 6. Ao iniciar um **jogo novo**, escolha **Espanhol (Español)** na tela de idioma. Essa escolha é obrigatória para a tradução funcionar.
 
-Para restaurar o original, feche o jogo e copie o backup original de volta para a pasta `AB`, confirmando a substituição do arquivo traduzido.
+O backup original e o manifesto ficam em `Documentos\\DQM3_PTBR_Backups`. Não apague esses arquivos enquanto puder precisar restaurar a instalação.
 
-As instruções completas também estão em [Instalação](docs/INSTALACAO.md) e no `LEIA-ME.txt` incluído no ZIP.
+## Restaurar a instalação original
+
+1. Feche o jogo.
+2. Execute `Restaurar_PTBR.cmd`.
+3. O restaurador tentará localizar a instalação e o backup correspondente automaticamente. Se necessário, permite selecionar a pasta do jogo ou o manifesto.
+4. Confira o resumo e digite `RESTAURAR` para confirmar.
+
+O restaurador confere os hashes do backup e do arquivo instalado. Se o arquivo atual tiver sido alterado depois da instalação — por exemplo, por uma atualização do jogo — a restauração é interrompida para evitar sobrescrever dados diferentes.
 
 ## Imagens do jogo traduzido
 
@@ -63,7 +71,7 @@ As instruções completas também estão em [Instalação](docs/INSTALACAO.md) e
 
 ## Compatibilidade
 
-Esta primeira versão foi preparada para a versão de PC testada pelo responsável do projeto. Atualizações futuras do jogo podem exigir uma nova versão. Não use o arquivo em versões diferentes sem antes conferir a compatibilidade.
+Esta primeira versão foi preparada para a versão de PC testada pelo responsável do projeto. Atualizações futuras do jogo podem exigir uma nova versão do tradutor. Não force a instalação em arquivos diferentes dos esperados pelo instalador.
 
 ## Créditos
 
