@@ -4,9 +4,30 @@ Projeto comunitário e não oficial de localização para português brasileiro 
 
 > **Não afiliado, endossado ou patrocinado pela Square Enix.** Dragon Quest Monsters: The Dark Prince, seus personagens e marcas pertencem aos respectivos titulares.
 
-## Galeria de capturas
+## Galeria — capturas reais do jogo traduzido
 
-As capturas reais do jogo com a tradução PT-BR ativa já foram selecionadas. Os arquivos de imagem ainda estão pendentes de inclusão no repositório; por isso, a galeria visual será ativada assim que as imagens forem enviadas para a pasta [screenshots](screenshots/).
+As imagens abaixo foram fornecidas pelo responsável pelo projeto e mostram o jogo em execução com a tradução PT-BR ativa. Os arquivos foram otimizados para publicação, sem substituir ou editar os textos exibidos.
+
+### Tutorial de combate
+![Tutorial de combate em português](screenshots/01_tutorial_combate.jpg)
+
+### Informações do monstro
+![Informações do monstro em português](screenshots/02_informacoes_do_monstro.jpg)
+
+### Diálogo com Moncho
+![Diálogo com Moncho em português](screenshots/03_dialogo_moncho.jpg)
+
+### Diálogo com Gaureen
+![Diálogo com Gaureen em português](screenshots/04_dialogo_gaureen.jpg)
+
+### Diálogo sobre o título de Mestre dos Monstros
+![Diálogo da campanha em português](screenshots/05_dialogo_mestre_dos_monstros.jpg)
+
+### Menu de grupo e tutorial
+![Menu de grupo e tutorial em português](screenshots/06_menu_grupo_e_tutorial.jpg)
+
+### Diálogo com Royston
+![Diálogo com Royston em português](screenshots/07_dialogo_royston.jpg)
 
 ## Escopo do projeto
 
