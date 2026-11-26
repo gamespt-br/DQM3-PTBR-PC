@@ -6,14 +6,21 @@
 >
 > O arquivo modificado deriva de um recurso original do jogo. A gratuidade e o escopo limitado do pacote não significam, por si só, autorização dos titulares nem eliminam eventuais questões de direitos autorais. Os direitos sobre o jogo e seus elementos originais permanecem com seus respectivos titulares.
 
+## Conteúdo do ZIP
+
+O arquivo `DQM3_PTBR_Tradutor_v1.0.zip` contém três itens:
+- o arquivo de dados de localização modificado;
+- `LEIA-ME.txt`, com instruções rápidas;
+- `SHA256SUMS.txt`, para conferência da integridade do arquivo.
+
 ## Instalar
 
-1. Extraia todo o conteúdo do ZIP para uma pasta do Windows.
+1. Extraia o ZIP para uma pasta do Windows.
 2. Feche o jogo.
-3. Dê dois cliques em **`Instalar_PTBR.cmd`**. Não execute o arquivo `.ps1` diretamente.
-4. O instalador procura o jogo automaticamente. Se não encontrar, abre uma janela para selecionar a pasta que contém `DQMonsters3.exe` e `DQMonsters3_Data`.
-5. Confira o caminho e digite **`INSTALAR`**.
-6. Aguarde a confirmação de conclusão.
+3. Abra a pasta de instalação do jogo pela Steam e entre em `DQMonsters3_Data\\StreamingAssets\\AB`.
+4. Localize o arquivo original com o mesmo nome do arquivo que veio no ZIP.
+5. Faça uma cópia do original e guarde-a em outro local seguro. Não pule esta etapa.
+6. Copie o arquivo de localização traduzido para a pasta `AB` e confirme a substituição do arquivo existente.
 
 ## Idioma obrigatório
 
@@ -22,20 +29,15 @@ Ao iniciar um **jogo novo**, o jogo pede que você escolha um idioma. Selecione 
 ## Restaurar a instalação original
 
 1. Feche o jogo.
-2. Dê dois cliques em **`Restaurar_PTBR.cmd`**.
-3. O restaurador procura o jogo automaticamente pelo mesmo caminho salvo usado na instalação, pelo caminho padrão e pelas bibliotecas Steam.
-4. Se não encontrar o jogo, abre uma janela para você selecionar a pasta que contém `DQMonsters3.exe` e `DQMonsters3_Data`.
-5. Depois de localizar o jogo, procura o backup correspondente àquela instalação. Se houver mais de um backup possível, permite escolher o manifesto correto.
-6. Confira o resumo e digite **`RESTAURAR`** para confirmar.
+2. Localize a cópia de segurança que você criou antes da instalação.
+3. Copie o arquivo original de volta para `DQMonsters3_Data\\StreamingAssets\\AB`.
+4. Confirme a substituição do arquivo traduzido.
 
 ## Importante
 
-- Use sempre os arquivos `.cmd` para instalar e restaurar. Eles executam o PowerShell com uma autorização temporária, sem alterar a política de segurança do Windows.
-- A instalação e a restauração usam a variável de ambiente `DQM3_GAME_PATH` para lembrar o local do jogo.
-- O backup fica em `Documentos\\DQM3_PTBR_Backups`. Não o apague enquanto puder precisar restaurar.
-- O restaurador verifica os arquivos de backup e o bundle instalado antes de substituir qualquer coisa. Se detectar uma alteração posterior ou atualização do jogo, interrompe a restauração para evitar sobrescrever dados mais recentes.
-- Se o jogo estiver em execução, feche-o antes de instalar ou restaurar.
+- Não apague o backup original enquanto puder precisar restaurar o jogo.
 - Esta é a primeira versão do tradutor (**v1.0**). Uma atualização futura do jogo pode exigir uma nova versão.
+- A versão foi preparada para a versão de PC testada pelo responsável do projeto. Não use o arquivo em versões diferentes sem antes conferir a compatibilidade.
 
 ## Créditos e independência
 
