@@ -7,4 +7,5 @@
 - Backup automático do arquivo substituído e opção de restauração.
 - Idioma obrigatório ao iniciar um jogo novo: **Espanhol (Español)**.
 - Compatibilidade preparada para a versão de PC testada pelo responsável do projeto.
+- Aviso público reforçado: projeto gratuito, independente e não oficial; o pacote contém somente um arquivo de dados de localização modificado e exige uma cópia do jogo adquirida separadamente.
 
