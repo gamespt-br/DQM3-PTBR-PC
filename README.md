@@ -32,15 +32,17 @@ As imagens abaixo foram fornecidas pelo responsável pelo projeto e mostram o jo
 ## Escopo do projeto
 
 - Tradução PT-BR para a versão PC/Steam.
-- Pacote de trabalho confirmado pelo responsável: **Atualização 13**.
-- Campanha principal e textos identificados das três DLCs contemplados no pacote testado pelo responsável.
-- Os 533 nomes dos monstros foram mantidos no original, conforme a decisão de localização do projeto.
+- Pacote de trabalho de referência: **Atualização 13**.
+- Acabamento de nomenclatura e textos auxiliares relacionados às três DLCs.
+- Os 533 nomes dos monstros foram mantidos no original.
 
-## Compatibilidade e distribuição
+## Compatibilidade e validação
 
-A tradução foi testada e confirmada pelo responsável em sua própria instalação Steam para PC. Isso não equivale a um teste independente em todas as configurações e não garante compatibilidade após futuras atualizações oficiais do jogo.
+O pacote da Atualização 13 passou pelas validações estruturais, de integridade ZIP, UnityFS e AES, preservando os tamanhos e os nomes dos 533 monstros. O relatório técnico que acompanha o pacote registra o teste final dentro do jogo como pendente de confirmação. Consulte [CHANGELOG.md](CHANGELOG.md) e [docs/INSTALACAO.md](docs/INSTALACAO.md) para o escopo e o estado dos testes.
 
-**O instalador/patch público ainda não está sendo distribuído por este repositório.** Antes de publicar arquivos modificados do jogo, o projeto passará por uma revisão do método de distribuição para evitar incluir dados originais do jogo desnecessariamente.
+## Distribuição
+
+O repositório contém documentação e capturas. O instalador local de teste preparado para o mantenedor contém o bundle completo do jogo e **não deve ser publicado em Release pública** sem revisão de direitos e permissões. O método de distribuição pública está em avaliação.
 
 ## Como acompanhar
 
@@ -48,4 +50,4 @@ Consulte [CHANGELOG.md](CHANGELOG.md) para o histórico, [CONTRIBUTING.md](CONTR
 
 ## Aviso
 
-Este é um projeto de fãs, gratuito e sem fins comerciais. Não inclui executáveis, bibliotecas, bundles ou outros arquivos originais do jogo.
+Este é um projeto de fãs, gratuito e sem fins comerciais. Não é uma versão oficial nem é afiliado à Square Enix.
