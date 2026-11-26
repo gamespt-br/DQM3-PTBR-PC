@@ -2,13 +2,23 @@
 
 Primeira versão do tradutor comunitário para português brasileiro da versão PC/Steam.
 
-> Projeto não oficial, sem vínculo ou endosso da Square Enix.
+> **Projeto independente, gratuito e não oficial.** Não é afiliado, patrocinado, aprovado ou endossado pela Square Enix. Não possuímos autorização ou licença oficial da Square Enix para esta tradução ou para a distribuição do arquivo de dados modificado.
+
+## Aviso sobre conteúdo e direitos
+
+O pacote do tradutor contém **um único arquivo de dados de localização do jogo**, modificado para incorporar textos em português brasileiro. Na instalação, somente o arquivo indicado é substituído; o instalador cria uma cópia de segurança do original.
+
+Este pacote **não contém o jogo completo, o executável do jogo nem a estrutura completa de instalação**. O usuário precisa possuir e instalar sua própria cópia de DRAGON QUEST MONSTERS: The Dark Prince para PC/Steam.
+
+O arquivo de localização é um recurso técnico derivado do jogo e mantém a estrutura necessária para ser lido por ele. Portanto, não é um arquivo independente de legendas criado do zero. Os direitos sobre o jogo e seus elementos originais permanecem com seus respectivos titulares.
+
+A tradução é disponibilizada gratuitamente e sem finalidade comercial. **A gratuidade, o escopo limitado a um único arquivo e este aviso de independência não significam autorização dos titulares nem eliminam, por si só, eventuais questões de direitos autorais.** O projeto não deve ser confundido com uma tradução oficial ou licenciada. O responsável reavaliará a disponibilização diante de eventual solicitação dos titulares dos direitos.
 
 ## Download
 
-O pacote público de instalação ainda não está disponível nesta página. Estamos preparando uma versão que aplique a tradução aos arquivos do jogo já instalados no computador, sem incluir uma cópia do bundle original do jogo.
+O pacote público de instalação ainda não está disponível nesta página. Quando publicado, ficará na página [Releases](https://github.com/gamespt-br/DQM3-PTBR-PC/releases).
 
-Quando estiver pronta, a versão para download ficará na página [Releases](https://github.com/gamespt-br/DQM3-PTBR-PC/releases).
+O pacote de instalação será composto pelo instalador, restaurador, instruções e o único arquivo de dados de localização modificado. Não será distribuída uma cópia do jogo.
 
 ## Como instalar
 
@@ -49,3 +59,7 @@ O instalador faz backup do arquivo original. Para desfazer a instalação, execu
 ## Compatibilidade
 
 Esta primeira versão foi preparada para a versão de PC testada pelo responsável do projeto. Atualizações futuras do jogo podem exigir uma nova versão.
+
+## Créditos
+
+DRAGON QUEST MONSTERS: The Dark Prince é uma obra de seus respectivos titulares. Os nomes, marcas e elementos originais são mencionados apenas para identificar o jogo compatível com este projeto comunitário.
