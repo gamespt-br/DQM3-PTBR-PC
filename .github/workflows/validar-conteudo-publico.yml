@@ -1,0 +1,19 @@
+name: Validar conteúdo público
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validar-arquivos:
+    name: validar-arquivos-publicos
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+      - name: Verificar arquivos e padrões de segredo
+        run: python3 scripts/check_public_files.py
