@@ -1,0 +1,43 @@
+# Arquivos originais/modificados do jogo — não enviar ao repositório
+*.assets
+*.bundle
+*.unity3d
+*.ress
+*.resource
+*.dll
+*.exe
+*.pak
+*.dat
+*.bin
+
+# Pacotes, backups e arquivos temporários
+*.zip
+*.7z
+*.rar
+*.bak
+*.backup
+*.orig
+*.tmp
+*.log
+
+# Dados locais e credenciais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+token*
+
+# Diretórios locais
+build/
+dist/
+output/
+temp/
+tmp/
+.cache/
+.DS_Store
+Thumbs.db
