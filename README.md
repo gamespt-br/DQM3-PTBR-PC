@@ -4,30 +4,9 @@ Projeto comunitário e não oficial de localização para português brasileiro 
 
 > **Não afiliado, endossado ou patrocinado pela Square Enix.** Dragon Quest Monsters: The Dark Prince, seus personagens e marcas pertencem aos respectivos titulares.
 
-## Galeria — capturas reais do jogo traduzido
+## Galeria de capturas
 
-As imagens são capturas fornecidas pelo responsável pelo projeto durante a execução do jogo com a tradução PT-BR ativa. Foram apenas otimizadas para publicação; os textos exibidos não foram substituídos ou editados.
-
-### Tutorial de combate
-![Tutorial de combate](screenshots/01_tutorial_combate.jpg)
-
-### Informações do monstro
-![Informações do monstro](screenshots/02_informacoes_do_monstro.jpg)
-
-### Diálogo com Moncho
-![Diálogo com Moncho](screenshots/03_dialogo_moncho.jpg)
-
-### Diálogo com Gaureen
-![Diálogo com Gaureen](screenshots/04_dialogo_gaureen.jpg)
-
-### Diálogo sobre o título de Mestre dos Monstros
-![Diálogo da campanha](screenshots/05_dialogo_mestre_dos_monstros.jpg)
-
-### Menu de grupo e tutorial
-![Menu de grupo](screenshots/06_menu_grupo_e_tutorial.jpg)
-
-### Diálogo com Royston
-![Diálogo com Royston](screenshots/07_dialogo_royston.jpg)
+As capturas reais do jogo com a tradução PT-BR ativa já foram selecionadas. Os arquivos de imagem ainda estão pendentes de inclusão no repositório; por isso, a galeria visual será ativada assim que as imagens forem enviadas para a pasta [screenshots](screenshots/).
 
 ## Escopo do projeto
 
@@ -44,7 +23,7 @@ A tradução foi testada e confirmada pelo responsável em sua própria instala�
 
 ## Como acompanhar
 
-Consulte [CHANGELOG.md](CHANGELOG.md) para o histórico e [CONTRIBUTING.md](CONTRIBUTING.md) para orientações de contribuição.
+Consulte [CHANGELOG.md](CHANGELOG.md) para o histórico, [CONTRIBUTING.md](CONTRIBUTING.md) para orientações de contribuição e [SECURITY.md](SECURITY.md) para as regras de segurança.
 
 ## Aviso
 
