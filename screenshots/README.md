@@ -1,8 +1,8 @@
 # Capturas de tela
 
-As sete capturas originais já foram selecionadas e organizadas localmente em um pacote de publicação. O upload binário pelo conector GitHub disponível nesta sessão não está habilitado; por isso, as imagens ainda não foram anexadas ao repositório.
+As capturas reais da tradução PT-BR foram selecionadas para a página do projeto. Os arquivos binários ainda precisam ser enviados para esta pasta pelo mantenedor.
 
-Quando o upload manual estiver disponível, coloque as sete imagens JPEG otimizadas nesta pasta, mantendo os nomes:
+Nomes previstos:
 
 - 01_tutorial_combate.jpg
 - 02_informacoes_do_monstro.jpg
@@ -12,4 +12,4 @@ Quando o upload manual estiver disponível, coloque as sete imagens JPEG otimiza
 - 06_menu_grupo_e_tutorial.jpg
 - 07_dialogo_royston.jpg
 
-Após o upload, adicione as imagens ao README principal.
+Depois do envio, atualize a galeria no README principal com os respectivos caminhos.
