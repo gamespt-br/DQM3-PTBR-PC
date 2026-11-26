@@ -38,8 +38,8 @@ Se a variável já estiver definida pelo usuário, o caminho informado tem prior
 4. Aguarde a busca automática. Se nenhuma instalação compatível for encontrada, selecione na janela a pasta principal que contém `DQMonsters3.exe` e `DQMonsters3_Data`. Não selecione `StreamingAssets` nem `AB`.
 5. Confira o caminho exibido e digite `INSTALAR` para confirmar a substituição.
 6. O instalador valida o SHA-256 do bundle, interrompe a instalação se o jogo estiver aberto, faz backup do bundle atual em `Documents\DQM3_PTBR_Backups`, instala o bundle e registra um manifesto.
-7. Mantenha o idioma do jogo em **Espanhol**, conforme o LEIA-ME da Atualização 13.
-8. Abra o jogo e teste a inicialização, menus, diálogos e os rótulos/conteúdos das três DLCs.
+7. **Ao iniciar um JOGO NOVO**, quando o jogo exibir a tela pedindo para escolher o idioma, selecione **Espanhol (Español)**. Essa escolha é obrigatória para a tradução PT-BR funcionar corretamente: o patch da Atualização 13 usa os recursos de texto do idioma espanhol como base. Não selecione outro idioma nessa tela.
+8. Depois de escolher Espanhol, prossiga com a criação do jogo. Em seguida, teste a inicialização, menus, diálogos e os rótulos/conteúdos das três DLCs.
 
 Se a biblioteca estiver protegida e ocorrer erro de acesso, feche o inicializador e execute `Instalar_PTBR.cmd` como administrador. Não altere a política global do PowerShell.
 

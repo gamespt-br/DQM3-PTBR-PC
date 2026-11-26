@@ -40,6 +40,8 @@ As imagens abaixo foram fornecidas pelo responsável pelo projeto e mostram o jo
 
 O pacote da Atualização 13 passou pelas validações estruturais, de integridade ZIP, UnityFS e AES, preservando os tamanhos e os nomes dos 533 monstros. O relatório técnico que acompanha o pacote registra o teste final dentro do jogo como pendente de confirmação. Consulte [CHANGELOG.md](CHANGELOG.md) e [docs/INSTALACAO.md](docs/INSTALACAO.md) para o escopo e o estado dos testes.
 
+**Importante para iniciar o jogo:** ao começar um jogo novo e surgir a tela de escolha de idioma, selecione **Espanhol (Español)**. O patch PT-BR da Atualização 13 usa os recursos de texto do espanhol como base.
+
 ## Distribuição
 
 O repositório contém documentação e capturas. O instalador local de teste preparado para o mantenedor contém o bundle completo do jogo e **não deve ser publicado em Release pública** sem revisão de direitos e permissões. O método de distribuição pública está em avaliação.
