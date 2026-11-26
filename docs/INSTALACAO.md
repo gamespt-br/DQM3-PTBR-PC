@@ -12,30 +12,43 @@ A instalação local de teste foi preparada com base no pacote fornecido pelo ma
 
 ## Instalador local de teste
 
-O pacote privado de teste preparado para o mantenedor inclui os scripts `Instalar_PTBR.ps1` e `Restaurar_PTBR.ps1`. Esses arquivos não estão incluídos no repositório público porque o pacote local contém o bundle completo do jogo.
+O pacote local privado preparado para o mantenedor usa os arquivos de entrada `Instalar_PTBR.cmd` e `Restaurar_PTBR.cmd`. Os scripts PowerShell e o bundle completo não estão incluídos no repositório público.
 
-O instalador:
+O inicializador CMD é o ponto de entrada obrigatório. Ele chama o Windows PowerShell com `-ExecutionPolicy Bypass -STA` somente para aquele processo; não altera a política global de execução do Windows.
 
-1. Confere o SHA-256 do bundle incluído no pacote.
-2. Solicita a pasta principal do jogo, que deve conter `DQMonsters3.exe` e `DQMonsters3_Data`.
-3. Confirma que o diretório `StreamingAssets\AB` e o bundle esperado existem.
-4. Interrompe a instalação se o jogo estiver em execução.
-5. Faz backup do bundle atualmente instalado em `Documents\DQM3_PTBR_Backups`.
-6. Copia o bundle PT-BR e verifica novamente o SHA-256.
-7. Registra um manifesto para permitir restauração.
+## Localização automática do jogo
 
-O script de restauração verifica o backup e o hash do bundle atual. Se o arquivo tiver sido alterado depois da instalação (por exemplo, por uma atualização oficial do jogo), a restauração automática é interrompida para evitar sobrescrever dados mais recentes.
+O instalador usa a variável de ambiente `DQM3_GAME_PATH`.
+
+1. O arquivo `Instalar_PTBR.cmd` define, caso a variável ainda não exista, o caminho padrão:
+   `%ProgramFiles(x86)%\Steam\steamapps\common\DRAGON QUEST MONSTERS The Dark Prince`.
+2. O instalador valida se esse caminho contém `DQMonsters3.exe`, `DQMonsters3_Data\StreamingAssets\AB` e o bundle esperado da Atualização 13.
+3. Se o caminho padrão não for válido, consulta o registro do Steam e os manifestos `appmanifest_2175540.acf` das bibliotecas Steam detectadas, incluindo bibliotecas adicionais.
+4. Se localizar uma instalação compatível, usa a pasta automaticamente, sem abrir a janela de seleção.
+5. Se não localizar, abre uma janela para o usuário escolher a pasta principal do jogo. A pasta escolhida precisa conter `DQMonsters3.exe`, `DQMonsters3_Data` e o bundle esperado.
+6. Depois de validado o caminho, o instalador tenta gravá-lo na variável de ambiente do usuário `DQM3_GAME_PATH`, para as próximas execuções.
+
+Se a variável já estiver definida pelo usuário, o caminho informado tem prioridade, mas ainda precisa passar pelas verificações de compatibilidade.
 
 ## Procedimento de teste local
 
+1. Extraia **todo** o pacote local do instalador para uma pasta do Windows. Não execute arquivos diretamente de dentro do ZIP.
+2. Feche o jogo.
+3. Dê dois cliques em **`Instalar_PTBR.cmd`**. Não execute `Instalar_PTBR.ps1` diretamente.
+4. Aguarde a busca automática. Se nenhuma instalação compatível for encontrada, selecione na janela a pasta principal que contém `DQMonsters3.exe` e `DQMonsters3_Data`. Não selecione `StreamingAssets` nem `AB`.
+5. Confira o caminho exibido e digite `INSTALAR` para confirmar a substituição.
+6. O instalador valida o SHA-256 do bundle, interrompe a instalação se o jogo estiver aberto, faz backup do bundle atual em `Documents\DQM3_PTBR_Backups`, instala o bundle e registra um manifesto.
+7. Mantenha o idioma do jogo em **Espanhol**, conforme o LEIA-ME da Atualização 13.
+8. Abra o jogo e teste a inicialização, menus, diálogos e os rótulos/conteúdos das três DLCs.
+
+Se a biblioteca estiver protegida e ocorrer erro de acesso, feche o inicializador e execute `Instalar_PTBR.cmd` como administrador. Não altere a política global do PowerShell.
+
+## Restauração
+
 1. Feche o jogo.
-2. Extraia o pacote local de instalador.
-3. Execute `Instalar_PTBR.ps1` pelo PowerShell. Se necessário, abra o PowerShell nessa pasta e execute:
-   `powershell -NoProfile -ExecutionPolicy Bypass -File .\Instalar_PTBR.ps1`
-4. Selecione a pasta que contém `DQMonsters3.exe` e `DQMonsters3_Data`.
-5. Mantenha o idioma do jogo em **Espanhol**, conforme o LEIA-ME da Atualização 13.
-6. Abra o jogo e teste a inicialização, menus, diálogos e os rótulos/conteúdos das três DLCs.
-7. Para voltar ao arquivo anterior, execute `Restaurar_PTBR.ps1` e selecione o manifesto criado em `Documents\DQM3_PTBR_Backups`.
+2. Dê dois cliques em **`Restaurar_PTBR.cmd`**. Não execute `Restaurar_PTBR.ps1` diretamente.
+3. Selecione o `manifest.json` da instalação que deseja reverter.
+4. O script verifica o backup e o hash do bundle atual. Se o jogo tiver sido atualizado depois da instalação, a restauração automática é interrompida para evitar sobrescrever dados mais recentes.
 
 ## Escopo da Atualização 13
 
@@ -56,9 +69,3 @@ O relatório incluído no pacote-fonte registra aprovação das verificações e
 O pacote local de teste contém o bundle completo do jogo. Ele não deve ser enviado ao repositório, incluído em uma Release pública ou distribuído pela Steam sem revisão de direitos e permissões.
 
 A preparação de um formato público que não redistribua dados originais do jogo desnecessariamente permanece pendente de revisão técnica e de permissões. Esta documentação não concede licença para distribuir conteúdo da Square Enix.
-
-## Avisos
-
-- A compatibilidade confirmada em uma instalação não garante compatibilidade com todos os PCs ou futuras atualizações oficiais.
-- Não use o pacote em versões/builds diferentes sem validação.
-- Não mantenha o jogo aberto durante a instalação ou restauração.
