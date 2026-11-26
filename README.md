@@ -1,12 +1,21 @@
-# Dragon Quest Monsters: The Dark Prince — Tradução PT-BR (PC)
+# Tradutor PT-BR v1.0 — Dragon Quest Monsters: The Dark Prince (PC)
 
-Projeto comunitário e não oficial de localização para português brasileiro da versão PC/Steam.
+Primeira versão do tradutor comunitário para português brasileiro da versão PC/Steam.
 
-> **Não afiliado, endossado ou patrocinado pela Square Enix.** Dragon Quest Monsters: The Dark Prince, seus personagens e marcas pertencem aos respectivos titulares.
+> Projeto não oficial, sem vínculo ou endosso da Square Enix.
 
-## Galeria — capturas reais do jogo traduzido
+## Como instalar
 
-As imagens abaixo foram fornecidas pelo responsável pelo projeto e mostram o jogo em execução com a tradução PT-BR ativa. Os arquivos foram otimizados para publicação, sem substituir ou editar os textos exibidos.
+1. Extraia todo o conteúdo do pacote para uma pasta.
+2. Feche o jogo.
+3. Execute `Instalar_PTBR.cmd`. Não abra o arquivo `.ps1` diretamente.
+4. Aguarde a busca automática. Se o jogo não for encontrado, selecione a pasta que contém `DQMonsters3.exe` e `DQMonsters3_Data`.
+5. Confira o caminho e digite `INSTALAR`.
+6. Ao iniciar um **jogo novo**, escolha **Espanhol (Español)** na tela de idioma. Essa escolha é obrigatória para a tradução funcionar.
+
+O instalador faz backup do arquivo original. Para desfazer a instalação, execute `Restaurar_PTBR.cmd` e selecione o manifesto correspondente.
+
+## Imagens do jogo traduzido
 
 ### Tutorial de combate
 ![Tutorial de combate em português](screenshots/01_tutorial_combate.jpg)
@@ -20,36 +29,20 @@ As imagens abaixo foram fornecidas pelo responsável pelo projeto e mostram o jo
 ### Diálogo com Gaureen
 ![Diálogo com Gaureen em português](screenshots/04_dialogo_gaureen.jpg)
 
-### Diálogo sobre o título de Mestre dos Monstros
+### Diálogo da campanha
 ![Diálogo da campanha em português](screenshots/05_dialogo_mestre_dos_monstros.jpg)
 
-### Menu de grupo e tutorial
-![Menu de grupo e tutorial em português](screenshots/06_menu_grupo_e_tutorial.jpg)
+### Menu de grupo
+![Menu de grupo em português](screenshots/06_menu_grupo_e_tutorial.jpg)
 
 ### Diálogo com Royston
 ![Diálogo com Royston em português](screenshots/07_dialogo_royston.jpg)
 
-## Escopo do projeto
+## Compatibilidade
 
-- Tradução PT-BR para a versão PC/Steam.
-- Pacote de trabalho de referência: **Atualização 13**.
-- Acabamento de nomenclatura e textos auxiliares relacionados às três DLCs.
-- Os 533 nomes dos monstros foram mantidos no original.
-
-## Compatibilidade e validação
-
-O pacote da Atualização 13 passou pelas validações estruturais, de integridade ZIP, UnityFS e AES, preservando os tamanhos e os nomes dos 533 monstros. O relatório técnico que acompanha o pacote registra o teste final dentro do jogo como pendente de confirmação. Consulte [CHANGELOG.md](CHANGELOG.md) e [docs/INSTALACAO.md](docs/INSTALACAO.md) para o escopo e o estado dos testes.
-
-**Importante para iniciar o jogo:** ao começar um jogo novo e surgir a tela de escolha de idioma, selecione **Espanhol (Español)**. O patch PT-BR da Atualização 13 usa os recursos de texto do espanhol como base.
+Esta primeira versão foi preparada para a versão de PC testada pelo responsável do projeto. Atualizações futuras do jogo podem exigir uma nova versão do tradutor.
 
 ## Distribuição
 
-O repositório contém documentação e capturas. O instalador local de teste preparado para o mantenedor contém o bundle completo do jogo e **não deve ser publicado em Release pública** sem revisão de direitos e permissões. O método de distribuição pública está em avaliação.
+O repositório contém documentação e imagens. O pacote local de instalação inclui dados do jogo e não deve ser publicado ou redistribuído publicamente sem a revisão das permissões necessárias.
 
-## Como acompanhar
-
-Consulte [CHANGELOG.md](CHANGELOG.md) para o histórico, [CONTRIBUTING.md](CONTRIBUTING.md) para orientações de contribuição e [SECURITY.md](SECURITY.md) para as regras de segurança.
-
-## Aviso
-
-Este é um projeto de fãs, gratuito e sem fins comerciais. Não é uma versão oficial nem é afiliado à Square Enix.
