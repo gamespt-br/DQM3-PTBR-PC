@@ -1,44 +1,61 @@
-# Instalação — Tradutor PT-BR v1.0
+# Instalação — Tradutor PT-BR v1.0 (patch diferencial)
 
 > **Aviso importante:** este é um projeto comunitário, gratuito, independente e não oficial. Não é afiliado, patrocinado, aprovado ou endossado pela Square Enix. Não se apresenta como tradução oficial ou licenciada.
 >
-> O pacote contém somente **um arquivo de dados de localização do jogo**, modificado para incorporar os textos em português brasileiro. Não inclui o jogo completo, executáveis nem a estrutura completa da instalação. É necessário possuir uma cópia do jogo para PC/Steam.
+> O pacote contém um patch diferencial para aplicar localmente alterações a um arquivo de dados de localização do jogo. Não inclui o bundle traduzido completo, o executável do jogo ou a estrutura completa da instalação. É necessário possuir uma cópia do jogo para PC/Steam.
 >
-> O arquivo modificado deriva de um recurso original do jogo. A gratuidade e o escopo limitado do pacote não significam, por si só, autorização dos titulares nem eliminam eventuais questões de direitos autorais. Os direitos sobre o jogo e seus elementos originais permanecem com seus respectivos titulares.
+> O patch contém alterações derivadas de recursos de localização do jogo. A distribuição diferencial reduz o conteúdo original incluído no pacote, mas não significa, por si só, autorização dos titulares nem elimina eventuais questões de direitos autorais.
 
 ## Conteúdo do ZIP
 
-O arquivo `DQM3_PTBR_Tradutor_v1.0.zip` contém três itens:
-- o arquivo de dados de localização modificado;
-- `LEIA-ME.txt`, com instruções rápidas;
-- `SHA256SUMS.txt`, para conferência da integridade do arquivo.
+O pacote contém:
+- `Instalar_PTBR.cmd` e `Restaurar_PTBR.cmd`;
+- `DQM3_PTBR_Installer.exe`, programa auxiliar Windows x64;
+- `patch.json`, com as alterações diferenciais;
+- `LEIA-ME.txt` e `SHA256SUMS.txt`.
+
+O ZIP não contém o bundle traduzido completo nem arquivos executáveis do jogo. Python e bibliotecas externas não são necessários.
 
 ## Instalar
 
-1. Extraia o ZIP para uma pasta do Windows.
+1. Extraia todo o ZIP para uma pasta do Windows.
 2. Feche o jogo.
-3. Abra a pasta de instalação do jogo pela Steam e entre em `DQMonsters3_Data\\StreamingAssets\\AB`.
-4. Localize o arquivo original com o mesmo nome do arquivo que veio no ZIP.
-5. Faça uma cópia do original e guarde-a em outro local seguro. Não pule esta etapa.
-6. Copie o arquivo de localização traduzido para a pasta `AB` e confirme a substituição do arquivo existente.
+3. Dê dois cliques em `Instalar_PTBR.cmd`.
+4. O instalador tentará localizar o jogo automaticamente pelas configurações e bibliotecas Steam. Se não encontrar, selecione a pasta principal que contém `DQMonsters3.exe` e `DQMonsters3_Data`.
+5. Confira o caminho apresentado e digite `INSTALAR` para confirmar.
+6. O programa verifica o hash do bundle original, aplica as alterações diferenciais localmente e confere os 331 TextAssets e o CAB reconstruído.
+7. Ao iniciar um **jogo novo**, escolha **Espanhol (Español)**. Essa opção é obrigatória para a tradução PT-BR funcionar.
 
-## Idioma obrigatório
+## Backup
 
-Ao iniciar um **jogo novo**, o jogo pede que você escolha um idioma. Selecione **Espanhol (Español)**. A tradução PT-BR depende dessa opção para funcionar corretamente.
+Antes de substituir o arquivo, o instalador cria e verifica uma cópia do original em:
+
+`Documentos\\DQM3_PTBR_Backups\\Tradutor_PTBR_v1.0-AAAAmmdd-HHmmss`
+
+O manifesto da instalação fica na mesma pasta. Não apague essa pasta enquanto puder precisar restaurar.
 
 ## Restaurar a instalação original
 
 1. Feche o jogo.
-2. Localize a cópia de segurança que você criou antes da instalação.
-3. Copie o arquivo original de volta para `DQMonsters3_Data\\StreamingAssets\\AB`.
-4. Confirme a substituição do arquivo traduzido.
+2. Dê dois cliques em `Restaurar_PTBR.cmd`.
+3. O restaurador procura o manifesto e o backup associados ao caminho da instalação.
+4. Confira o arquivo de destino e o backup encontrado.
+5. Digite `RESTAURAR` para confirmar.
 
-## Importante
+O backup é verificado pelo SHA-256 antes da restauração. Se o bundle atual não corresponder ao hash registrado como instalado, o processo é interrompido para evitar sobrescrever dados diferentes. O restaurador também reconhece os manifestos do pacote v1.0 anterior que substituía o bundle completo, desde que os backups originais ainda estejam em `Documentos\\DQM3_PTBR_Backups`.
 
-- Não apague o backup original enquanto puder precisar restaurar o jogo.
-- Esta é a primeira versão do tradutor (**v1.0**). Uma atualização futura do jogo pode exigir uma nova versão.
-- A versão foi preparada para a versão de PC testada pelo responsável do projeto. Não use o arquivo em versões diferentes sem antes conferir a compatibilidade.
+## Compatibilidade e segurança
+
+- Windows 10/11 de 64 bits.
+- Bundle original suportado: SHA-256 `31e716932ab95479be1e1a4b212891f032caefb3fd8dfb39f4d56ae9b115081a`.
+- BuildID de referência: `20285966`.
+- O patch contém 331 registros e valida o CAB reconstruído contra SHA-256 `56f940a1f1592db59bb964265380eb103b3774dfb01eb2c83aae8d543f9c89a9`.
+- Se o bundle de origem for diferente, a instalação é interrompida sem substituí-lo.
+- Se o bundle instalado tiver sido alterado depois da aplicação, a restauração é interrompida.
+- Atualizações futuras do jogo podem exigir uma nova versão.
+
+O programa auxiliar é um executável comunitário sem assinatura digital. O Windows pode exibir um aviso de editor desconhecido. Execute somente se tiver obtido o pacote de uma fonte em que confia. Não desative o Microsoft Defender ou outras proteções do Windows.
 
 ## Créditos e independência
 
-DRAGON QUEST MONSTERS: The Dark Prince, seus nomes, personagens, marcas e demais elementos originais pertencem aos respectivos titulares. Eles são mencionados apenas para identificar o jogo compatível. Este projeto é uma iniciativa de fãs, sem associação oficial com a Square Enix. Não reivindicamos propriedade sobre o jogo ou seus elementos originais.
+DRAGON QUEST MONSTERS: The Dark Prince, seus nomes, personagens, marcas e demais elementos originais pertencem aos respectivos titulares. Eles são mencionados apenas para identificar o jogo compatível. Este projeto é uma iniciativa de fãs, sem associação oficial com a Square Enix e sem reivindicar propriedade sobre os elementos originais.
